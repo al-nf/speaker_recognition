@@ -1,0 +1,10 @@
+spectrograms/clips/*
+!spectrograms/clips/SPEAKER\ AUDIO\ GOES\ HERE
+
+spectrograms/gen/*
+!spectrograms/gen/FAKE\ SPECTROGRAMS\ WILL\ APPEAR\ HERE
+
+spectrograms/real/*
+!spectrograms/real/REAL\ SPECTROGRAMS\ WILL\ GO\ HERE
+
+*.log

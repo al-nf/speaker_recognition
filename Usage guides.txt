@@ -1,0 +1,6 @@
+  1.The files for the spectrograms. The spectrograms have been placed in the thesis data and there is no need to use speech to generate the spectrograms, the folder includes the original spectrograms as well as the 5%, 10%, 15, 20% ......40% of the spectrograms that I have already generated.
+
+  2.Use of GAN networks. If you need to generate new spectrograms based on your own spectrograms, in the folder gan in gan.m as the main program, each parameter has been set up, you just need to enter the original spectrogram location in the spectrogram file in order to generate new spectrograms.
+
+  3.The use of resnet18 network, the main program is untitled, each layer in the network has been built, each parameter in the parmas data, just need to load.
+
