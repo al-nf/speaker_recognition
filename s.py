@@ -13,11 +13,11 @@ for line in lines:
     if m:
         epoch, gen, real, acc = m.groups()
         # Fill remaining columns with None or empty string
-        row = [int(epoch), int(gen), int(real), float(acc), '', '', '', '']
+        row = [int(epoch), int(gen), int(real), float(acc)]
         rows.append(row)
 
 # Create DataFrame
-columns = ['Epoch', 'GenPercent', 'RealPercent', 'Accuracy', 'Col5', 'Col6', 'Col7', 'Col8']
+columns = ['Epoch', 'GenPercent', 'RealPercent', 'Accuracy']
 df = pd.DataFrame(rows, columns=columns)
 
 # Save to CSV or print
