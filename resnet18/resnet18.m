@@ -18,7 +18,10 @@ numEpochs = numel(genPercents);
 
 inputSize = [224 224 3];
 
-for epochIdx = 1:numEpochs
+numRuns = 5;
+for runIdx = 1:numRuns
+    for epochIdx = 1:numEpochs
+        fprintf('Starting run %d/%d, epoch %d/%d...\n', runIdx, numRuns, epochIdx, numEpochs);
     % Build the layer graph for each run
     lgraph = layerGraph();
     
@@ -214,14 +217,28 @@ for epochIdx = 1:numEpochs
         'MiniBatchSize',32, ...
         'ValidationData',augimdsVal, ...
         'ValidationFrequency',30, ...
-        'Verbose',false, ...
-        'Plots','training-progress');
+        'Verbose',false);
     % Train the network
     net = trainNetwork(augimdsTrain, lgraph, options);
     % Test accuracy
     preds = classify(net, augimdsVal);
     acc = mean(preds == imdsVal.Labels);
-    fprintf('Epoch %d: Gen %.0f%%, Real %.0f%%, Accuracy: %.4f\n', epochIdx, genPercents(epochIdx), realPercents(epochIdx), acc);
-    % Save the trained network and accuracy
-    save(sprintf('resnet18_speaker_mix_%d_%d.mat', genPercents(epochIdx), realPercents(epochIdx)), 'net', 'acc');
+    logMsg = sprintf('Epoch %d: Gen %.0f%%, Real %.0f%%, Accuracy: %.4f\n', epochIdx, genPercents(epochIdx), realPercents(epochIdx), acc);
+    fid = fopen('training_log.txt', 'a');
+    if fid ~= -1
+        fprintf(fid, '%s', logMsg);
+        fclose(fid);
+    else
+        warning('Could not open training_log.txt for writing.');
+    end
+    fid = fopen('training_log.txt', 'a');
+    end
+    if fid ~= -1
+        fprintf(fid, '\n');
+        fclose(fid);
+    
+        % Save the trained network and accuracy
+        save(sprintf('resnet18_speaker_mix_%d_%d_run%d.mat', genPercents(epochIdx), realPercents(epochIdx), runIdx), 'net', 'acc');
+    end
 end
+close all;

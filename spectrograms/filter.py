@@ -5,8 +5,8 @@ import csv
 import shutil
 
 TSV_PATH = os.path.join(os.path.dirname(__file__), 'other.tsv')
-CLIPS_DIR = os.path.join(os.path.dirname(__file__), 'clips')
-CLIPS_NEW_DIR = os.path.join(os.path.dirname(__file__), 'clips_new')
+CLIPS_DIR = os.path.join(os.path.dirname(__file__), 'data')
+CLIPS_NEW_DIR = os.path.join(os.path.dirname(__file__), 'clips')
 
 clip_files = set(f for f in os.listdir(CLIPS_DIR) if f.endswith('.mp3'))
 
