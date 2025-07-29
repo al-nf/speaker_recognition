@@ -79,3 +79,138 @@ Epoch 6: Gen 30%, Real 70%, Accuracy: 0.9698
 Epoch 7: Gen 35%, Real 65%, Accuracy: 0.9650
 Epoch 8: Gen 40%, Real 60%, Accuracy: 0.9749
 
+Epoch 1: Gen 5%, Real 95%, Accuracy: 0.9502
+Epoch 2: Gen 10%, Real 90%, Accuracy: 0.9552
+Epoch 3: Gen 15%, Real 85%, Accuracy: 0.9650
+Epoch 4: Gen 20%, Real 80%, Accuracy: 0.9403
+Epoch 5: Gen 25%, Real 75%, Accuracy: 0.9750
+Epoch 6: Gen 30%, Real 70%, Accuracy: 0.9502
+Epoch 7: Gen 35%, Real 65%, Accuracy: 0.9700
+Epoch 8: Gen 40%, Real 60%, Accuracy: 0.9751
+
+Epoch 1: Gen 5%, Real 95%, Accuracy: 0.9500
+Epoch 2: Gen 10%, Real 90%, Accuracy: 0.9550
+Epoch 3: Gen 15%, Real 85%, Accuracy: 0.9698
+Epoch 4: Gen 20%, Real 80%, Accuracy: 0.9801
+Epoch 5: Gen 25%, Real 75%, Accuracy: 0.9700
+Epoch 6: Gen 30%, Real 70%, Accuracy: 0.9749
+Epoch 7: Gen 35%, Real 65%, Accuracy: 0.9700
+Epoch 8: Gen 40%, Real 60%, Accuracy: 0.9598
+
+Epoch 1: Gen 5%, Real 95%, Accuracy: 0.9700
+Epoch 2: Gen 10%, Real 90%, Accuracy: 0.9698
+Epoch 3: Gen 15%, Real 85%, Accuracy: 0.9497
+Epoch 4: Gen 20%, Real 80%, Accuracy: 0.9598
+Epoch 5: Gen 25%, Real 75%, Accuracy: 0.9652
+Epoch 6: Gen 30%, Real 70%, Accuracy: 0.9749
+Epoch 7: Gen 35%, Real 65%, Accuracy: 0.9801
+Epoch 8: Gen 40%, Real 60%, Accuracy: 0.9751
+
+Epoch 1: Gen 5%, Real 95%, Accuracy: 0.9600
+Epoch 2: Gen 10%, Real 90%, Accuracy: 0.9749
+Epoch 3: Gen 15%, Real 85%, Accuracy: 0.9648
+Epoch 4: Gen 20%, Real 80%, Accuracy: 0.9801
+Epoch 5: Gen 25%, Real 75%, Accuracy: 0.9849
+Epoch 6: Gen 30%, Real 70%, Accuracy: 0.9600
+Epoch 7: Gen 35%, Real 65%, Accuracy: 0.9800
+Epoch 8: Gen 40%, Real 60%, Accuracy: 0.9899
+
+Epoch 1: Gen 5%, Real 95%, Accuracy: 0.9800
+Epoch 2: Gen 10%, Real 90%, Accuracy: 0.9403
+Epoch 3: Gen 15%, Real 85%, Accuracy: 0.9602
+Epoch 4: Gen 20%, Real 80%, Accuracy: 0.9700
+Epoch 5: Gen 25%, Real 75%, Accuracy: 0.9800
+Epoch 6: Gen 30%, Real 70%, Accuracy: 0.9700
+Epoch 7: Gen 35%, Real 65%, Accuracy: 0.9800
+Epoch 8: Gen 40%, Real 60%, Accuracy: 0.9849
+
+Epoch 1: Gen 5%, Real 95%, Accuracy: 0.9698
+Epoch 2: Gen 10%, Real 90%, Accuracy: 0.9799
+Epoch 3: Gen 15%, Real 85%, Accuracy: 0.9548
+Epoch 4: Gen 20%, Real 80%, Accuracy: 0.9652
+Epoch 5: Gen 25%, Real 75%, Accuracy: 0.9700
+Epoch 6: Gen 30%, Real 70%, Accuracy: 0.9650
+Epoch 7: Gen 35%, Real 65%, Accuracy: 0.9650
+Epoch 8: Gen 40%, Real 60%, Accuracy: 0.9600
+
+Epoch 1: Gen 5%, Real 95%, Accuracy: 0.9600
+Epoch 2: Gen 10%, Real 90%, Accuracy: 0.9851
+Epoch 3: Gen 15%, Real 85%, Accuracy: 0.9850
+Epoch 4: Gen 20%, Real 80%, Accuracy: 0.9700
+Epoch 5: Gen 25%, Real 75%, Accuracy: 0.9652
+Epoch 6: Gen 30%, Real 70%, Accuracy: 0.9850
+Epoch 7: Gen 35%, Real 65%, Accuracy: 0.9850
+Epoch 8: Gen 40%, Real 60%, Accuracy: 0.9849
+
+Epoch 1: Gen 5%, Real 95%, Accuracy: 0.9800
+Epoch 2: Gen 10%, Real 90%, Accuracy: 0.9701
+Epoch 3: Gen 15%, Real 85%, Accuracy: 0.9600
+Epoch 4: Gen 20%, Real 80%, Accuracy: 0.9799
+Epoch 5: Gen 25%, Real 75%, Accuracy: 0.9698
+Epoch 6: Gen 30%, Real 70%, Accuracy: 0.9548
+Epoch 7: Gen 35%, Real 65%, Accuracy: 0.9900
+Epoch 8: Gen 40%, Real 60%, Accuracy: 0.9799
+
+Epoch 1: Gen 5%, Real 95%, Accuracy: 0.9502
+Epoch 2: Gen 10%, Real 90%, Accuracy: 0.9650
+Epoch 3: Gen 15%, Real 85%, Accuracy: 0.9500
+Epoch 4: Gen 20%, Real 80%, Accuracy: 0.9750
+Epoch 5: Gen 25%, Real 75%, Accuracy: 0.9900
+Epoch 6: Gen 30%, Real 70%, Accuracy: 0.9550
+Epoch 7: Gen 35%, Real 65%, Accuracy: 0.9800
+Epoch 8: Gen 40%, Real 60%, Accuracy: 0.9598
+
+Epoch 1: Gen 5%, Real 95%, Accuracy: 0.9450
+Epoch 2: Gen 10%, Real 90%, Accuracy: 0.9750
+Epoch 3: Gen 15%, Real 85%, Accuracy: 0.9900
+Epoch 4: Gen 20%, Real 80%, Accuracy: 0.9652
+Epoch 5: Gen 25%, Real 75%, Accuracy: 0.9700
+Epoch 6: Gen 30%, Real 70%, Accuracy: 0.9453
+Epoch 7: Gen 35%, Real 65%, Accuracy: 0.9851
+Epoch 8: Gen 40%, Real 60%, Accuracy: 0.9799
+
+Epoch 1: Gen 5%, Real 95%, Accuracy: 0.9502
+Epoch 2: Gen 10%, Real 90%, Accuracy: 0.9850
+Epoch 3: Gen 15%, Real 85%, Accuracy: 0.9849
+Epoch 4: Gen 20%, Real 80%, Accuracy: 0.9701
+Epoch 5: Gen 25%, Real 75%, Accuracy: 0.9800
+Epoch 6: Gen 30%, Real 70%, Accuracy: 0.9548
+Epoch 7: Gen 35%, Real 65%, Accuracy: 0.9550
+Epoch 8: Gen 40%, Real 60%, Accuracy: 0.9653
+
+Epoch 1: Gen 5%, Real 95%, Accuracy: 0.9497
+Epoch 2: Gen 10%, Real 90%, Accuracy: 0.9900
+Epoch 3: Gen 15%, Real 85%, Accuracy: 0.9652
+Epoch 4: Gen 20%, Real 80%, Accuracy: 0.9750
+Epoch 5: Gen 25%, Real 75%, Accuracy: 0.9648
+Epoch 6: Gen 30%, Real 70%, Accuracy: 0.9602
+Epoch 7: Gen 35%, Real 65%, Accuracy: 0.9900
+Epoch 8: Gen 40%, Real 60%, Accuracy: 0.9552
+
+Epoch 1: Gen 5%, Real 95%, Accuracy: 0.9750
+Epoch 2: Gen 10%, Real 90%, Accuracy: 0.9548
+Epoch 3: Gen 15%, Real 85%, Accuracy: 0.9698
+Epoch 4: Gen 20%, Real 80%, Accuracy: 0.9700
+Epoch 5: Gen 25%, Real 75%, Accuracy: 0.9602
+Epoch 6: Gen 30%, Real 70%, Accuracy: 0.9700
+Epoch 7: Gen 35%, Real 65%, Accuracy: 0.9698
+Epoch 8: Gen 40%, Real 60%, Accuracy: 0.9750
+
+Epoch 1: Gen 5%, Real 95%, Accuracy: 0.9800
+Epoch 2: Gen 10%, Real 90%, Accuracy: 0.9849
+Epoch 3: Gen 15%, Real 85%, Accuracy: 0.9799
+Epoch 4: Gen 20%, Real 80%, Accuracy: 0.9400
+Epoch 5: Gen 25%, Real 75%, Accuracy: 0.9850
+Epoch 6: Gen 30%, Real 70%, Accuracy: 0.9849
+Epoch 7: Gen 35%, Real 65%, Accuracy: 0.9750
+Epoch 8: Gen 40%, Real 60%, Accuracy: 0.9851
+
+Epoch 1: Gen 5%, Real 95%, Accuracy: 0.9701
+Epoch 2: Gen 10%, Real 90%, Accuracy: 0.9502
+Epoch 3: Gen 15%, Real 85%, Accuracy: 0.9900
+Epoch 4: Gen 20%, Real 80%, Accuracy: 0.9700
+Epoch 5: Gen 25%, Real 75%, Accuracy: 0.9652
+Epoch 6: Gen 30%, Real 70%, Accuracy: 0.9602
+Epoch 7: Gen 35%, Real 65%, Accuracy: 0.9800
+Epoch 8: Gen 40%, Real 60%, Accuracy: 0.9850
+

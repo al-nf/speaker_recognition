@@ -238,7 +238,7 @@ for runIdx = 1:numRuns
         fclose(fid);
     
         % Save the trained network and accuracy
-        save(sprintf('resnet18_speaker_mix_%d_%d_run%d.mat', genPercents(epochIdx), realPercents(epochIdx), runIdx), 'net', 'acc');
+        % save(sprintf('resnet18_speaker_mix_%d_%d_run%d.mat', genPercents(epochIdx), realPercents(epochIdx), runIdx), 'net', 'acc');
     end
 end
 close all;
