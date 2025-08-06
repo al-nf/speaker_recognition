@@ -23,6 +23,20 @@ df = pd.DataFrame(rows, columns=columns)
 df.to_csv('training_log_table.csv', index=False)
 
 
+
+
+'''
+# Print number of samples
+num_samples = len(df)
+print(f"Number of samples: {num_samples}")
+
+# Print number of samples for each GenPercent category
+cat_counts = df['GenPercent'].value_counts().sort_index()
+print("\nNumber of samples per GenPercent category:")
+for gen, count in cat_counts.items():
+    print(f"GenPercent {gen}%: {count} samples")
+'''
+
 # Calculate and print standard deviation of Accuracy
 std_dev = df['Accuracy'].std()
 print(f"Standard deviation of Accuracy: {std_dev}")
@@ -45,7 +59,21 @@ plt.errorbar(gen_stats['GenPercent'], gen_stats['mean'], yerr=gen_stats['sem'], 
 plt.xlabel('GenPercent')
 plt.ylabel('Mean Accuracy')
 plt.title('GenPercent vs Mean Accuracy (with Standard Error)')
+
+
 plt.grid(True)
+plt.show()
+
+
+# Boxplot of Accuracy grouped by GenPercent
+plt.figure()
+df.boxplot(column='Accuracy', by='GenPercent', grid=True)
+plt.xlabel('GenPercent')
+plt.ylabel('Accuracy')
+plt.title('Boxplot: Accuracy by GenPercent')
+plt.suptitle('')  # Remove default pandas boxplot title
+plt.grid(True)
+plt.show()
 
 # Linear regression: GenPercent vs mean Accuracy
 from scipy import stats

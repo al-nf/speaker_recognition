@@ -10,15 +10,16 @@ genDir = './spectrograms/gen';
 imdsReal = imageDatastore(realDir, 'IncludeSubfolders', true, 'LabelSource', 'foldernames');
 imdsGen = imageDatastore(genDir, 'IncludeSubfolders', true, 'LabelSource', 'foldernames');
 
-% Mixing proportions
-numTotal = min(numel(imdsReal.Files) + numel(imdsGen.Files), 1000); % Use up to 1000 images
-genPercents = 5:5:40; % 5%, 10%, ..., 40%
-realPercents = 100 - genPercents; % 95%, 90%, ..., 60%
+
+% Mixing proportions (now includes 0% generated, 100% real)
+numTotal = numel(imdsReal.Files) + numel(imdsGen.Files); % Use up to 1000 images
+genPercents = [0:5:40]; % 0%, 5%, 10%, ..., 40%
+realPercents = 100 - genPercents; % 100%, 95%, ..., 60%
 numEpochs = numel(genPercents);
 
 inputSize = [224 224 3];
 
-numRuns = 5;
+numRuns = 1;
 for runIdx = 1:numRuns
     for epochIdx = 1:numEpochs
         fprintf('Starting run %d/%d, epoch %d/%d...\n', runIdx, numRuns, epochIdx, numEpochs);
@@ -196,15 +197,42 @@ for runIdx = 1:numRuns
     lgraph = connectLayers(lgraph,"res5a_relu","res5b/in2");
     lgraph = connectLayers(lgraph,"bn5b_branch2b","res5b/in1");
 
-    % Mix data for this epoch
+    % Always use 150 real spectrograms per speaker (12 speakers), add generated ones on top according to the ratio
+    speakers = categories(imdsReal.Labels);
+    numSpeakers = numel(speakers);
+    numRealPerSpeaker = min(150, min(countcats(imdsReal.Labels)));
+    realFiles = {};
+    realLabels = categorical;
+    for s = 1:numSpeakers
+        spk = speakers(s);
+        idx = find(imdsReal.Labels == spk);
+        if numel(idx) >= numRealPerSpeaker
+            idxSample = idx(randperm(numel(idx), numRealPerSpeaker));
+        else
+            idxSample = idx;
+        end
+        realFiles = [realFiles; imdsReal.Files(idxSample)];
+        realLabels = [realLabels; imdsReal.Labels(idxSample)];
+    end
+
+    totalReal = numel(realFiles);
     genProp = genPercents(epochIdx) / 100;
-    realProp = realPercents(epochIdx) / 100;
-    numGen = round(numTotal * genProp);
-    numReal = round(numTotal * realProp);
-    idxGen = randperm(numel(imdsGen.Files), min(numGen, numel(imdsGen.Files)));
-    idxReal = randperm(numel(imdsReal.Files), min(numReal, numel(imdsReal.Files)));
-    imdsMix = imageDatastore([imdsGen.Files(idxGen); imdsReal.Files(idxReal)], ...
-        'Labels', [imdsGen.Labels(idxGen); imdsReal.Labels(idxReal)]);
+    if genProp == 0 || numel(imdsGen.Files) == 0
+        numGen = 0;
+    else
+        numGen = round(totalReal * genProp / (1 - genProp));
+    end
+    if numGen > 0
+        numGen = min(numGen, numel(imdsGen.Files));
+        idxGen = randperm(numel(imdsGen.Files), numGen);
+        genFiles = imdsGen.Files(idxGen);
+        genLabels = imdsGen.Labels(idxGen);
+    else
+        genFiles = {};
+        genLabels = categorical;
+    end
+    imdsMix = imageDatastore([genFiles; realFiles], ...
+        'Labels', [genLabels; realLabels]);
     % Split into training/validation
     [imdsTrain, imdsVal] = splitEachLabel(imdsMix, 0.8, 'randomized');
     % Preprocess images
